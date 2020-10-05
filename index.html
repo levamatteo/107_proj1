@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>The Doors To Success</title>
+    <title>loading...</title>
     <meta name="description" content="The Doors To Success">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <style>
@@ -11,8 +11,8 @@
       }
       a-scene {
         margin: auto;
-          width: 50%;
-        height: 400px;
+  height: 300px;
+  width: 600px;
       }
       p{
         color: #27a392;
@@ -20,9 +20,12 @@ Text-align  center
       }
       h1 {
         font-style: bold;
-        color: #fff203;
+        color: #27a392;
         text-align: center;
       }
+      a-loader-title {
+  color: #a34227;
+}
     </style>
 
   </head>
@@ -36,7 +39,10 @@ Text-align  center
       The Doors To Success
     </h1>
 
-    <a-scene background="color: #a34227">
+
+  <div id="myEmbeddedScene">
+    <a-scene embedded background="color: #a34227" loading-screen="dotsColor: #27a392; backgroundColor: #a34227">
+      <!-- ... -->
 
   <a-assets>
     <video id="penguin-sledding" autoplay loop="true" src="https://cdn.glitch.com/390da4e1-d952-459a-9825-8d7a6949e299%2F2020-10-05%2000-46-38_Trim.mp4?v=1601884817595"></video>
@@ -45,8 +51,7 @@ Text-align  center
 
 
 
-
-  <a-plane position="0 -0 -5" rotation="-90 0 0" width="4" height="4" color="#000000" shadow="" material="" geometry="" scale="2.55 2.06 0.24"></a-plane>
+  <a-plane position="0 -0 -5" rotation="-90 0 0" width="4" height="4" color="#27a392" shadow="" material="" geometry="" scale="2.55 2.06 0.24"></a-plane>
 
 <a-entity gltf-model="https://cdn.glitch.com/390da4e1-d952-459a-9825-8d7a6949e299%2FProj1_final_low_poly.gltf?v=1601882950764" scale="0.5 0.5 0.5" position="-1 0 -5"></a-entity>
 
@@ -55,6 +60,8 @@ Text-align  center
 <a-video src="#penguin-sledding" width="8" height="4.5" position="-6.55137 2.88559 -6.53386" material="" geometry="" rotation="0.03495042550298021 58.968816274864324 -0.03437746770784939"></a-video>
    <a-video src="#penguin-sledding" width="8" height="4.5" position="7.11021 2.69648 -6.81266" material="" geometry="" rotation="0.03495042550298021 122.17580136031134 -0.03437746770784939"></a-video>
 
-    </a-scene>
+     </a-scene>
+  </div>
+
   </body>
 </html>
